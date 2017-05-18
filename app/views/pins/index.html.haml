@@ -1,0 +1,5 @@
+%h2 Hello World
+
+%button.btn= link_to 'Create a new pin', new_pin_path
+- @pins.each do |pin|
+  %h2= link_to(pin.title, pin)
