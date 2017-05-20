@@ -3,7 +3,7 @@
   = f.input :description, as: :text, 
                           error: 'Please add a little info',
                           input_html: { rows: 30 }
-  = f.button :submit
-  .btn.btn-danger
-    = link_to 'Go Home', root_path 
+  = f.button :submit, 'Update post', :class => 'btn btn-primary'
+  .btn.btn-secondary
+    = link_to 'Cancel', pin_path 
  
