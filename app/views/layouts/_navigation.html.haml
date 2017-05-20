@@ -1,0 +1,25 @@
+%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  %a.navbar-brand{:href => root_path} Pin Board
+  #navbarSupportedContent.collapse.navbar-collapse
+    - if user_signed_in?
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.active
+          %a.nav-link{:href => new_pin_path}
+            New Post
+        %li.nav-item
+          %a.nav-link{:href => edit_user_registration_path} Account
+        %li.nav-item
+          .nav-link= link_to 'Sign Out', destroy_user_session_path, method: :delete
+    - else
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.active
+          %a.nav-link{:href => new_user_session_path}
+            Sign in
+        %li.nav-item
+          %a.nav-link{:href => new_user_registration_path} Sign Up
+
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{:placeholder => "Search", :type => "text"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search

@@ -33,6 +33,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'simple_form'
 gem 'devise'
+gem "paperclip", "~> 5.0.0"
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -41,8 +43,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
-gem bcrypt --platform=ruby
+gem 'bcrypt', '~> 3.1.11'
+#gem bcrypt --platform=ruby
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -66,4 +68,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

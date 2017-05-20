@@ -2,6 +2,7 @@
 
 = simple_form_for @pin do |f|
   = f.input :title, error: 'Title is mandatory, please specify one'
+  = f.input :image, as: :file, label: false
   = f.input :description, as: :text, 
                           error: 'Please add a little info',
                           input_html: { rows: 30 }
